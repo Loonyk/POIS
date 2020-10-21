@@ -1,0 +1,13 @@
+#lang racket
+(define list1 (list 1 2 3 4 5))
+(display "LIST 1:")
+(display list1)
+(define list2 (list 7 6 5 7))
+(newline)
+(display "LIST 2:")
+(display list2)
+(newline)
+(if (positive? (*(car list1)(car list2)))
+    (display (append list1 list2))
+    (display (append (cdr (cdr (cdr(cdr list1)))) (cdr list2)))
+    )
